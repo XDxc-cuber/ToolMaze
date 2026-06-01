@@ -15,6 +15,7 @@ ToolMaze/
 │   └── plugins/           # Executable plugin modules
 ├── data/
 │   ├── perturbed_tasks/   # Task JSONs grouped by complexity (c1..c4)
+|   ├── tasks/             # Task JSONs generated from templates
 │   └── templates/         # DAG templates used by the judge
 ├── evaluation/
 │   ├── core/              # sandbox.py, judge.py, metrics.py
@@ -59,7 +60,11 @@ judge:
 export OPENAI_API_KEY="your-key"
 ```
 
-### 3. Run evaluation
+### 3. Download dataset
+
+You can download the dataset from [this link](https://huggingface.co/datasets/dongsheng/ToolMaze) and unzip it into `data`:
+
+### 4. Run evaluation
 
 **Single task / category:**
 
@@ -88,7 +93,7 @@ python run_api_eval.py --models gpt-4o --modes P2 P4
 
 **Concurrent batch over multiple models (with delete-and-retry):**
 
-Edit the `MODELS` dict (and `API_BASE_URL` / `API_KEY`) at the top of
+Edit the `MODELS` dict at the top of
 `run_batch_api_eval.py`, then:
 
 ```bash
