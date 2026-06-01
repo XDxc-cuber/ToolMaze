@@ -357,7 +357,7 @@ def evaluate_single_task(
 def main():
     """Main evaluation function."""
     parser = argparse.ArgumentParser(description="Run evaluation for C1/C2/C3/C4 tasks")
-    parser.add_argument("--config", type=str, default="evaluation/configs/eval_config.yaml",
+    parser.add_argument("--config", type=str, default="evaluation/configs/openai_eval_config_c1.yaml",
                         help="Path to config file")
     parser.add_argument("--modes", nargs="+", default=None,
                         help="Modes to evaluate (e.g., P0 P1 P3)")

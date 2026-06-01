@@ -21,6 +21,7 @@ import sys
 from pathlib import Path
 
 # ── API credentials (hardcoded) ───────────────────────────────────────────────
+# If empty, falls back to the base_url / api_key defined in BASE_CONFIG.
 API_BASE_URL = ""
 API_KEY      = ""
 
@@ -52,8 +53,10 @@ def make_config(model_name: str, category: str, dry_run: bool,
     result_model_name = f"{model_name}_p0prompt" if p0_prompt else model_name
     cfg["agent"]["type"]            = "openai"
     cfg["agent"]["model"]           = model_name          # used for API calls
-    cfg["agent"]["base_url"]        = API_BASE_URL
-    cfg["agent"]["api_key"]         = API_KEY
+    if API_BASE_URL:
+        cfg["agent"]["base_url"]    = API_BASE_URL
+    if API_KEY:
+        cfg["agent"]["api_key"]     = API_KEY
     cfg["agent"]["force_p0_prompt"] = p0_prompt
     if p0_prompt:
         cfg["agent"]["result_tag"]  = "p0prompt"
