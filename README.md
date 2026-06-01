@@ -62,7 +62,7 @@ export OPENAI_API_KEY="your-key"
 
 ### 3. Download dataset
 
-You can download the dataset from [this link](https://huggingface.co/datasets/dongsheng/ToolMaze) and unzip it into `data`:
+You can download the dataset from [this link](https://huggingface.co/datasets/dongsheng/ToolMaze) and unzip it into `data`.
 
 ### 4. Run evaluation
 
