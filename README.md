@@ -1,5 +1,7 @@
 # ToolMaze
 
+This project is from the paper "[When Tools Fail: Benchmarking Dynamic Replanning and Anomaly Recovery in LLM Agents
+]([https://arxiv.org/abs/2501.12432](https://arxiv.org/abs/2606.05806))". 
 Evaluation framework for testing LLM agents on C1/C2/C3/C4 tool-use tasks
 under P0–P4 perturbation modes. The framework runs an agent inside a
 sandboxed tool runtime, intercepts tool calls to inject perturbations, and
