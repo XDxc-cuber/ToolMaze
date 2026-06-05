@@ -173,3 +173,16 @@ Implement `evaluation/agents/<name>_agent.py` exposing a class that
 inherits `BaseAgent` (see `base_agent.py`), then register it in
 `evaluation/agents/__init__.py` and add a branch in
 `evaluation/scripts/run_eval.py:create_agent()`.
+
+## Citation
+```bibtex
+@misc{zhu2026toolsfailbenchmarkingdynamic,
+      title={When Tools Fail: Benchmarking Dynamic Replanning and Anomaly Recovery in LLM Agents}, 
+      author={Dongsheng Zhu and Xuchen Ma and Yucheng Shen and Xiang Li and Yukun Zhao and Shuaiqiang Wang and Lingyong Yan and Dawei Yin},
+      year={2026},
+      eprint={2606.05806},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2606.05806}, 
+}
+```
